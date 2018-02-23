@@ -28,7 +28,7 @@ function googleMapSrvc() {
             })(30);
         }
 
-        function init() {
+        function init(key) {
             return promisify(function (callback) {
                 (function (d, s, id) {
                     var js, fjs = d.getElementsByTagName(s)[0];
@@ -40,7 +40,7 @@ function googleMapSrvc() {
                             isInitialized = true;
                             callback();
                         };
-                        js.src = '//maps.googleapis.com/maps/api/js?callback=' + provider.callbackName;
+                        js.src = `//maps.googleapis.com/maps/api/js?key=${key}&callback=${provider.callbackName}`;
                         fjs.parentNode.insertBefore(js, fjs);
                     }
                 }(document, 'script', 'google-map'));

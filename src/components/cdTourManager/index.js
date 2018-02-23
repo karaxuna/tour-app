@@ -9,7 +9,7 @@ controller.$inject = [
 function controller(scope, storageSrvc, googleMapSrvc) {
     let geocoder;
 
-    googleMapSrvc.init().then(() => {
+    googleMapSrvc.init('AIzaSyCH2bsMY1eQunKk8Nbij1lTGFLRiVmpP2Q').then(() => {
         geocoder = new google.maps.Geocoder;
         scope.mapReady = true;
     });

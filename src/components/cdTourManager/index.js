@@ -69,6 +69,7 @@ function controller(scope, storageSrvc, googleMapSrvc) {
     scope.clearPersistentData = () => {
         scope.waypoints = [];
         scope.tours = [];
+        scope.markers.length = 0;
     };
 }
 

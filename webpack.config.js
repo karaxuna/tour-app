@@ -12,7 +12,7 @@ var webpackConfig = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
-        publicPath: '/'
+        publicPath: './'
     },
     module: {
         rules: [
@@ -74,6 +74,7 @@ var webpackConfig = {
         ignored: /node_modules/
     },
     devServer: {
+        publicPath: '/',
         historyApiFallback: {
             index: '/',
             disableDotRule: true

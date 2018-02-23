@@ -1,0 +1,33 @@
+<div class="cd-tour-manager">
+    <div class="cd-tour-manager__header">
+        <div>
+            <button type="button" ng-click="saveWayPoint()">Save And Add Waypoint</button>
+        </div>
+        <div>
+            <button type="button" ng-click="saveTour()">Save Tour</button>
+        </div>
+        <div>
+            <button type="button" ng-click="clearPersistentData()">Clear Persisted Data</button>
+        </div>
+    </div>
+    <div class="cd-tour-manager__body">
+        <div class="cd-tour-manager__body__map" ng-if="mapReady">
+            <cd-google-map
+                ng-model="$parent.centerLocation"
+                initial-zoom="initialZoom"
+                max-zoom="maxZoom"
+                static-markers="markers"
+                show-directions="showDirections">
+            </cd-google-map>
+        </div>
+        <div class="cd-tour-manager__body__waypoints">
+            <div ng-repeat="waypoint in waypoints" ng-click="addWaypoint(waypoint)">
+                {{waypoint.address}}
+            </div>
+        </div>
+    </div>
+    <div class="cd-tour-manager__footer">
+        <h3>Tours</h3>
+        <pre><code>{{tours | json}}</code></pre>
+    </div>
+</div>

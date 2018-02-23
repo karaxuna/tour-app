@@ -1,0 +1,78 @@
+cd-tour-manager {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cd-tour-manager {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    max-width: 1366px;
+    max-height: 1000px;
+
+    > .cd-tour-manager__header {
+        display: flex;
+        flex-direction: row;
+        height: 40px;
+
+        > div {
+            flex: 1;
+            
+            > button {
+                background-color: #3e94d1;
+                color: white;
+                border: solid 1px white;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    > .cd-tour-manager__body {
+        flex: 3;
+        display: flex;
+        flex-direction: row;
+        
+        > .cd-tour-manager__body__map {
+            flex: 3;
+        }
+
+        > .cd-tour-manager__body__waypoints {
+            flex: 1;
+            overflow: auto;
+
+            > div {
+                padding: 20px 15px;
+                background-color: #e8e8e8;
+                margin: 1px;
+                font-size: 13px;
+                cursor: pointer;
+    
+                &:hover {
+                    opacity: .9;
+                }
+            }
+        }
+    }
+
+    > .cd-tour-manager__footer {
+        flex: 2;
+        background-color: #272822;
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+        
+        > h3 {
+            color: white;
+        }
+
+        > pre {
+            flex: 1;
+            overflow: auto;
+            color: #bfcfc2;
+        }
+    }
+}

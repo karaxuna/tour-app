@@ -1,4 +1,4 @@
-##Tour App ([Demo](https://karaxuna.github.io/tour-app/))
+Tour App ([Demo](https://karaxuna.github.io/tour-app/))
 
 Run in dev mode:
 
